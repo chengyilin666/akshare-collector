@@ -6,7 +6,6 @@ package.domain = org.quant
 
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,json
-source.exclude_dirs = tests,bin,.git,.github
 
 version = 1.0.0
 requirements = python3,kivy

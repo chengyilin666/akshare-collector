@@ -5,27 +5,34 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
 
+env:
+  BUILDOZER_WARN_ON_ROOT: 1
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Rename main file
-        run: mv main_android.py main.py
-      
-      - name: Build APK with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          command: buildozer android debug
-          workdir: .
-          buildozer_version: stable
+          python-version: '3.10'
+          cache: 'pip'
+      
+      - name: Install Buildozer
+        run: |
+          pip install --upgrade pip wheel
+          pip install buildozer cython==0.29.33
+      
+      - name: Build APK
+        working-directory: ./android
+        run: buildozer android debug
       
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: akshare-collector-apk
-          path: bin/*.apk
+          path: android/bin/*.apk
           retention-days: 30

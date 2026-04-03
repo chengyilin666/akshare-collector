@@ -22,7 +22,6 @@ restore_project.py
 # 数据目录
 akshare_data/
 
-# Buildozer
-.buildozer/
-bin/
-main.py
+# Buildozer (根目录)
+/.buildozer/
+/bin/
