@@ -23,7 +23,7 @@ android.archs = arm64-v8a
 android.allow_backup = True
 
 p4a.bootstrap = sdl2
-p4a.branch = stable
+p4a.branch = master
 
 [buildozer]
 log_level = 2
