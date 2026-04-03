@@ -1,0 +1,18 @@
+{
+    "_comment": "==========================================",
+    "_description": "AKShare 数据采集器配置文件 (DuckDB版)",
+    "_version": "2.0",
+    "_comment2": "==========================================",
+    
+    "request_interval": 1,
+    "_request_interval_comment": "API请求间隔(秒)，防止请求过快被封禁，建议值: 0.5-1.0",
+    
+    "max_retries": 3,
+    "_max_retries_comment": "网络请求失败时的最大重试次数，建议值: 2-5",
+    
+    "retry_delay": 2,
+    "_retry_delay_comment": "重试之间的延迟时间(秒)，建议值: 1-5",
+    
+    "min_disk_space_gb": 10,
+    "_min_disk_space_gb_comment": "最小可用磁盘空间(GB)，低于此值会警告并停止采集，建议值: 1-10"
+}

@@ -1,0 +1,28 @@
+# 数据文件
+*.duckdb
+*.db
+*.log
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 临时文件
+*.tmp
+*.bak
+restore_project.py
+
+# 数据目录
+akshare_data/
+
+# Buildozer
+.buildozer/
+bin/
+main.py
