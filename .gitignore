@@ -18,6 +18,7 @@ __pycache__/
 *.tmp
 *.bak
 restore_project.py
+错误.md
 
 # 数据目录
 akshare_data/
